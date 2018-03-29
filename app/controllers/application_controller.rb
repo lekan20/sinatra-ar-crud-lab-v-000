@@ -22,6 +22,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts' do
-
+    @posts = Posts.all
   end
 end
