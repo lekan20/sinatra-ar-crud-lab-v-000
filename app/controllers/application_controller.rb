@@ -22,6 +22,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts' do
+    binding.pry
     @posts = Post.all
     erb :show
   end
