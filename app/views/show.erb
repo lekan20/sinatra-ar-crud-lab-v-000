@@ -1,7 +1,13 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <body>
+  <p>
   <body>
 </head>
-</html>
+</html> -->
+
+<% @posts.each do |post|
+  <%= post.name %>
+  <%= post.content %>
+<% end %>
