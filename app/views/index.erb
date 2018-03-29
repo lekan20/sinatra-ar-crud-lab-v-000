@@ -1,5 +1,4 @@
-<form action="/posts" method="post" >
-  <p><input type="text" name="name" id="name"></p>
-  <p><input type="text" name="content" id="content"></p>
-  <p><input type="submit" id="submit"></p>
-</form>
+<% @posts.each do |post|
+  <%= post.name %>
+  <%= post.content %>
+<% end %>
