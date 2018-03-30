@@ -12,6 +12,11 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  get '/posts' do
+    @posts = Post.all
+    erb :posts
+  end
+
   get '/posts/new' do
     erb :new
   end
@@ -21,10 +26,7 @@ class ApplicationController < Sinatra::Base
     redirect_to '/posts'
   end
 
-  get '/posts' do
-    @posts = Post.all
-    erb :posts
-  end
+  
 
   get '/posts/:id' do
     @post = Post.find(params[:id])
